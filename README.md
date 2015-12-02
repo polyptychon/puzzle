@@ -1,1 +1,1 @@
-http://harrissidiropoulos.github.io/puzzle02/
+http://polyptychon.github.io/puzzle/
