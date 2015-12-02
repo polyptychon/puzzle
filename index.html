@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Simple Game</title>
+        <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap-3-0-1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    </head>
+    <body>
+        <div id="svg-canvas">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div id="help">
+            <div id="help-label" class="btn pull-left">Press shift and click inside a puzzle part to rotate</div>
+            <div class="pull-right">
+                <div id="multiPlayer" class="btn btn-default progress-striped" data-close-label="Disconnect from other players">Connect with other players</div>
+
+                <div id="change-image" class="btn btn-default progress-striped">Change Image</div>
+
+                <div class="btn-group">
+                    <div id="solve" class="btn btn-default">Solve</div>
+                    <div id="shuffle" class="btn btn-default">Shuffle</div>
+                </div>
+
+            </div>
+
+        </div>
+        <script>
+            UUIDv4 = function b(a){return a?(a^Math.random()*16>>a/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,b)}
+            TogetherJSConfig_findRoom = {prefix: UUIDv4().split("-").join(""), max: 5};
+            TogetherJSConfig_suppressJoinConfirmation = true;
+            //TogetherJSConfig_includeHashInUrl = true;
+            $_IS_SERVER = location.hash.indexOf("togetherjs")<0;
+            TogetherJSConfig_suppressInvite = false;
+        </script>
+        <script type="text/javascript" src="https://togetherjs.com/togetherjs-min.js"></script>
+        <script type="text/javascript" src="assets/libs/snap-svg/snap.svg-min.js"></script>
+        <script type="text/javascript" src="assets/libs/greensock-js/TweenMax.min.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </body>
+</html>

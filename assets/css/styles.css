@@ -1,0 +1,32 @@
+body, html {
+    background: #DFDFDF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+svg {
+    display: block;
+    background: #FFF;
+    margin: 10px auto 0 auto;
+    width: 960px;
+    height: 650px;
+}
+
+#Layer_1 {
+    display: none;
+}
+
+#help {
+    width: 960px;
+    height: 52px;
+    margin: 10px auto 0 auto;
+    padding: 10px;
+
+    background: white;
+    color: #333;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
